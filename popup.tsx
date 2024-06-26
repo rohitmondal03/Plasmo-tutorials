@@ -4,21 +4,16 @@ function IndexPopup() {
   const [data, setData] = useState("")
 
   return (
-    <div
-      style={{
-        padding: 16
-      }}>
-      <h2>
-        Welcome to your{" "}
-        <a href="https://www.plasmo.com" target="_blank">
-          Plasmo
-        </a>{" "}
-        Extension!
-      </h2>
-      <input onChange={(e) => setData(e.target.value)} value={data} />
-      <a href="https://docs.plasmo.com" target="_blank">
-        View Docs
-      </a>
+    <div>
+      <h1>Popup</h1>
+      <input
+        type="text"
+        value={data}
+        onChange={(e) => setData(e.target.value)}
+      />
+      <button onClick={() => console.log(data)}>
+        Submit
+      </button>
     </div>
   )
 }
